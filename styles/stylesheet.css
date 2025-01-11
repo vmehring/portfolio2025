@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url("https://use.typekit.net/vzh1goo.css");
+body {
+  background-color: white;
+  color: black;
+  font-family: "Arial", sans-serif;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  }
+header {
+  background-image: linear-gradient(to left, #c2bdcd, #ffffff 75%);
+  display: grid;
+  grid-template-areas: 'title name';
+  grid-auto-columns: 70% 25%;
+  gap: 5%;
+  max-width: 100%;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+  border-bottom: 3px double #6A5D7B;
+  h2 {
+    grid-area: title;
+    }
+  h3 {
+    grid-area: name;
+    }
+  }
+main {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  }
+h1, h2, h3, h4 {
+  font-family: "Architects Daughter", cursive;
+  padding: .5rem;
+  margin: 0;
+  }
+h1 {
+  font-size: 4rem;
+  }
+h2 {
+  font-size: 3rem;
+  }
+h3 {
+  font-size: 2.8rem;
+  padding: .5rem;
+  }
+h4 {
+  font-size: 2rem;
+  padding: .3rem;
+  }
+.splashscreen {
+  display: flex;
+  margin: 2rem auto;
+  max-width: 75%;
+  align-items: center;
+  justify-content: center;
+  }
+.center {
+  position: absolute;
+  padding: .5rem;
+  margin: auto;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 6px black;
+  a {
+    color: white;
+    }
+  a:visited {
+    color: white;
+    }
+  }
+p {
+  display: block;
+  margin: 1rem;
+  }
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 0.2rem;
+  }
+a:visited {
+  color: black;
+  }
+a:hover {
+  color: black;
+  }
+a:active {
+  font-weight: bold;
+  }
+.gallery {
+  max-width: 100%;
+  padding: .5rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  }
+figure {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 1.5rem;
+  padding: 0;
+  box-shadow: .5rem .5rem .5rem rgba(69, 54, 77, 0.3),
+   -.2rem -.2rem .5rem rgba(69, 54, 77, 0.3);
+  img {
+    object-fit: cover;
+    max-width: 100%;
+    }
+  }
+figcaption {
+  font-family: "Architects Daughter", cursive;
+  font-size: 1.2rem;
+  padding: .5rem;
+  }
+
+nav {
+  display: block;
+  grid-area: menu;
+  }
+
+.navtitle {
+  display: flex;
+  position: static;
+  width: 4rem;
+  height: 4rem;
+  background-color: #c2bdcd;
+  overflow: visible;
+  align-items: center;
+  box-shadow: .5rem .5rem .5rem rgba(69, 54, 77, 0.3) inset,
+   -.5rem -.5rem .5rem rgba(69, 54, 77, 0.3) inset;
+  h3 {padding: 0 1rem;}
+  }
+.navtitle:hover {
+  background-color: #90869b;
+  a {color: white;}
+  a:hover {color: white;}
+  text-shadow: 3px 3px 6px #45364d;
+  }
+
+.menu-link: {display: block;}
+
+.menu-link:hover {
+  background-color: #90869b;
+  color: white;
+  a:hover {color: white;}
+  }
+
+.bottomnav {
+  .spacer {margin: 1rem auto;}
+  .menu-content {
+    display: grid;
+    grid: auto auto auto auto auto / 19% 19% 19% 19% 20%;
+    grid-auto-flow: row;
+    column-gap: 1%;
+    background-color: #c2bdcd;
+    .menu-link {margin: 0;}
+    }
+  }
+.sidenav {
+  .spacer {margin: 1rem;}
+  .menu-content {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    }
+  .menu-link {
+    margin: 0.2rem 1.5rem;
+    a {font-size: .9rem;}
+    background-color: #c2bdcd;
+    box-shadow: 0.2rem 1rem 1rem 0 rgba(69, 54, 77, 0.5);
+    }
+  }
+
+  .list {display: none;}
+
+/* Slideshow of project renderings */
+.renderings {
+  grid-area: slideshow;
+  margin-top: 1rem;
+}
+
+.renderedViews {
+  display: none;
+  position: relative;
+  }
+
+.prev, .next {
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: .5rem;
+  /* margin-top: -50%; */
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(69, 54, 77, 0.8);
+  color: white;
+}
+.caption-container {
+  text-align: center;
+  background-color: #45364d;
+  padding: 1rem;
+  color: white;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 12.5%;
+}
+.demo {opacity: 0.6;}
+.active, .demo:hover {opacity: 1;}
+
+#caption {
+  margin: 0;
+  padding: 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .splashscreen {
+    margin: 2rem;
+    max-width: 100%;
+    }
+  figure {
+    max-width: 95%;
+    padding: .5rem;
+    }
+
+  h1 {font-size: 3rem;}
+  h2 {font-size: 2.4rem;}
+  h3 {font-size: 1.8rem;}
+  h4 {font-size: 1.2rem;}
+
+  .each-project {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 100%;
+    p {padding: 1.5rem 2rem;}
+    }
+
+  nav {order: 4;}
+
+  .bottomnav {
+    display: flex;
+    flex-flow:  column nowrap;}
+  .sidenav {display: none;}
+
+  img {max-width: 100%;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .splashscreen {
+    margin: 2rem auto;
+    max-width: 90%;
+    }
+  figure {max-width: 46%;}
+  h1 {font-size: 3.5rem;}
+  h2 {font-size: 2.8rem;}
+  h3 {font-size: 2rem;}
+  h4 {font-size: 1.4rem;
+  }
+  .each-project {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 100%;
+    .plan {
+      margin-top: 1rem;
+      max-width: 100%;
+      }
+    p {padding: 1.5rem 2rem;}
+    }
+
+  nav {order: 4;}
+
+  .bottomnav {
+    display: flex;
+    flex-flow:  column nowrap;}
+  .sidenav {display: none;}
+
+  }
+  img {max-width: 100%;}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  figure {
+    max-width: 30%;
+    }
+  .each-project {
+    display: grid;
+    grid-template-areas: 'menu image'
+                         'description description'
+                         'slideshow slideshow';
+    grid-auto-columns: 25% 75%;
+    gap: 0;
+    max-width: 100%;
+    height: auto;
+    p {
+      grid-area: description;
+      padding: 1rem 2rem;
+      }
+    }
+
+  .menu-content {max-width: 100%;}
+
+  .bottomnav {display: none;}
+  .sidenav {display: block;}
+
+  .plan {
+    padding: 1rem;
+    grid-area: image;
+    max-width: 100%;
+  }
+.renderings {margin-top: 1rem;}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  figure {max-width: 25%;}
+
+  .center h1 {font-size: 4.5rem;}
+  .center h3 {font-size: 2.2rem;}
+
+  .each-project {
+    display: grid;
+    grid-template-areas: 'menu image description'
+                         'menu image plant-list'
+                         'menu slideshow space';
+    grid-auto-columns: 18% 52% 30%;
+    gap: 0;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+    .plan {
+      grid-area: image;
+      max-width: 100%;
+      padding: 1rem 1rem 0 0;
+      }
+    p {
+      grid-area: description;
+      padding: 2rem 2rem 1rem 1rem;
+      }
+    }
+
+  .menu-content {max-width: 100%;}
+
+  .bottomnav {display: none;}
+  .sidenav {display: block;}
+  }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  figure {max-width: 15%;}
+
+  .center h1 {font-size: 5rem;}
+  .center h2 {font-size: 2.5rem;}
+
+  .each-project {
+    display: grid;
+    grid-template-areas: 'menu image description'
+                         'menu slideshow plant-list';
+    grid-auto-columns: 18% 52% 30%;
+    gap: 0;
+    max-width: 100%;
+    .plan {
+      grid-area: image;
+      max-width: 100%;
+      padding: 1rem 1rem 0 0;
+      }
+    p {
+      grid-area: description;
+      padding: 2rem 2rem 1rem 1rem;
+      }
+    }
+
+  .menu-content {max-width: 100%;}
+
+  .bottomnav {display: none;}
+  .sidenav {display: block;}
+
+  }
+
+.mySlides {
+  display: none;
+  max-width: 100%;
+  img {
+    object-fit: contain;
+    max-width: 100%;
+    }
+  }
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  }
+
+@keyframes fade {
+  0% {opacity: 0}
+  30% {opacity: 1}
+  }
+
+footer {
+  display: block;
+  background-image: linear-gradient(to left, #c2bdcd, #ffffff 75%);
+  margin: 0;
+  border-top: 3px double #6A5D7B;
+  padding: 2rem;
+  }
+
+/*# sourceMappingURL=stylesheet.css.map */

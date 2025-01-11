@@ -1,0 +1,197 @@
+// Colors and basic styling
+$oliveshadow: #222518;
+$dkolive: #323624;
+$nickel: #53584b;
+$silver: #777578;
+$dklavender:#90869b;
+$ltlavender: #c2bdcd;
+$ltblue: #dff2fd;
+$ltblack: rgba(0, 0, 0, 0.3);
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url("https://use.typekit.net/vzh1goo.css");
+
+// Mixin for making box shadows
+
+@mixin textShadow {
+  text-shadow: .3rem .3rem .2rem $oliveshadow;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+header {
+  display: block;
+  background: $ltblack, url(../images/Mahonia_nervosa.jpg);
+  margin: 0;
+  color: white;
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    border: 0;
+    padding: .5rem;
+    height: auto;
+    ul {
+      list-style-type: none;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 0;
+      li {
+        margin: .5rem;
+        border: .5rem;
+        border-radius: .25rem;
+        padding: .5rem;
+        text-align: center;
+        background-color: $ltblack;
+        color: $ltblue;
+        width:auto;
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+main {
+  display: block;
+  flex-flow: row wrap;
+  padding: 2rem 2rem 2rem 4rem;
+}
+
+h1 {
+  font-family: blambot-pro, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3.5rem;
+  padding: 4rem 1rem 4rem 4rem;
+  margin: 0;
+}
+h2 {
+  @extend h1;
+  font-size: 2rem;
+  padding: 1rem;
+}
+h3 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 2.8rem;
+  padding: 1rem;
+}
+h4 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+p {
+  display: block;
+  margin:0;
+  padding: .2rem .2rem 2rem .2rem;
+}
+
+a {
+  text-decoration: none;
+  color: $ltblue;
+  display: block;
+  padding: .2rem;
+  &:visited {color: $ltblue;}
+  &:hover {color: white;}
+  &:active {font-weight: bold;}
+}
+
+.placeholder {
+  width: 100%;
+  height: .4rem;
+  border-top: .1rem solid $nickel;
+  border-bottom: .2rem solid $nickel;
+  margin: 1rem 0 2rem 0;
+  color: $oliveshadow;
+  font-size: .1rem;
+}
+
+.portfolio-container {
+  width: 55%;
+  padding: 1rem 1rem 2rem 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  h4 {
+    color: $ltlavender;
+    width: 100%;
+    text-align: left;
+  }
+  img {
+    vertical-align: middle;
+    object-fit: scale-down;
+  }
+}
+
+.portfolio-container-wide {
+  @extend .portfolio-container;
+  flex-flow: row wrap;
+  width: 80%;
+  a {
+    display: inline-block;
+    max-width: 30%;
+  }
+}
+
+.large {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 2rem 0;
+}
+
+.med {
+  @extend .large;
+  display: inline-block;
+  max-width: 45%;
+}
+
+.small {
+  @extend .large;
+  max-width: 30%;
+}
+
+.thumbnail {
+  display: block;
+  max-width: 10rem;
+  height: auto;
+}
+
+.mySlides {display: none;}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+
+@keyframes fade {
+  0% {opacity: .4}
+  25% {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+footer {
+  display: block;
+  background: $ltblack, url(../images/1734footer-img.png);
+  margin: 0;
+  padding: 2rem 1rem 1rem 8rem;
+}
